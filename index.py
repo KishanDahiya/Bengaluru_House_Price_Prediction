@@ -109,95 +109,78 @@ lbl_bg.place(x=0,y=0,relwidth=1,relheight=1)
 
 
 
-Title_Label=Label(root,text="Bengaluru House Price Prediction",font=("times new roman",15,"bold"),bg="white")
-Title_Label.place(x=750,y=50)
+Title_Label=Label(root,text="Bengaluru House Price Prediction",font=("times new roman",25,"bold"),bg="white smoke")
+Title_Label.place(x=580,y=35)
 
 
-
-# areaType_Label=Label(root,text="House Area Type : ",font=("times new roman",15,"bold"),bg="white")
-# areaType_Label.pack()
-# #location_Label.place(x=20,y=50)
-# areaType_entry=ttk.Entry(root,textvariable=areaType,font=("times new roman",15))
-# areaType_entry.pack()
-# #location_entry.place(x=20,y=80,width=250)
+areaType_Label=Label(root,text="House Area Type",font=("times new roman",15,"bold"),bg="white")
+areaType_Label.place(x=540,y=100,width=250)
+areaType_entry=ttk.Entry(root,textvariable=areaType,font=("times new roman",15))
+areaType_entry.place(x=860,y=100,width=250)
 
 
-# location_Label=Label(root,text="Location",font=("times new roman",15,"bold"),bg="white")
-# location_Label.pack()
-# #location_Label.place(x=20,y=50)
-# location_entry=ttk.Entry(root,textvariable=location,font=("times new roman",15))
-# location_entry.pack()
-# #location_entry.place(x=20,y=80,width=250)
+location_Label=Label(root,text="House Location",font=("times new roman",15,"bold"),bg="white")
+location_Label.place(x=540,y=145,width=250)
+location_entry=ttk.Entry(root,textvariable=location,font=("times new roman",15))
+location_entry.place(x=860,y=145,width=250)
 
 
-# status_Label=Label(root,text="Moving in Status :",font=("times new roman",15,"bold"),bg="white")
-# status_Label.pack()
-# #location_Label.place(x=20,y=50)
-# status_entry=ttk.Entry(root,textvariable=status,font=("times new roman",15))
-# status_entry.pack()
-# #location_entry.place(x=20,y=80,width=250)
+status_Label=Label(root,text="Moving in Status",font=("times new roman",15,"bold"),bg="white")
+status_entry=ttk.Entry(root,textvariable=status,font=("times new roman",15))
+status_Label.place(x=540,y=190,width=250)
+status_entry.place(x=860,y=190,width=250)
 
 
-# size_Label=Label(root,text="Size of House(BHK) :",font=("times new roman",15,"bold"),bg="white")
-# size_Label.pack()
-# #location_Label.place(x=20,y=50)
-# size_entry=ttk.Entry(root,textvariable=size,font=("times new roman",15))
-# size_entry.pack()
-# #location_entry.place(x=20,y=80,width=250)
+size_Label=Label(root,text="Size of House(in BHK)",font=("times new roman",15,"bold"),bg="white")
+size_entry=ttk.Entry(root,textvariable=size,font=("times new roman",15))
+size_Label.place(x=540,y=235,width=250)
+size_entry.place(x=860,y=235,width=250)
+
+society_Label=Label(root,text="Society Name",font=("times new roman",15,"bold"),bg="white")
+society_entry=ttk.Entry(root,textvariable=society,font=("times new roman",15))
+society_entry.place(x=860,y=280,width=250)
+society_Label.place(x=540,y=280,width=250)
 
 
-# society_Label=Label(root,text="Society :",font=("times new roman",15,"bold"),bg="white")
-# society_Label.pack()
-# #location_Label.place(x=20,y=50)
-# society_entry=ttk.Entry(root,textvariable=society,font=("times new roman",15))
-# society_entry.pack()
-# #location_entry.place(x=20,y=80,width=250)
+total_sqft_Label=Label(root,text="Total area(sqft)",font=("times new roman",15,"bold"),bg="white")
+total_sqft_entry=ttk.Entry(root,textvariable=total_sqft,font=("times new roman",15))
+total_sqft_Label.place(x=540,y=325,width=250)
+total_sqft_entry.place(x=860,y=325,width=250)
 
 
-# total_sqft_Label=Label(root,text="Total Sqft :",font=("times new roman",15,"bold"),bg="white")
-# total_sqft_Label.pack()
-# #location_Label.place(x=20,y=50)
-# total_sqft_entry=ttk.Entry(root,textvariable=total_sqft,font=("times new roman",15))
-# total_sqft_entry.pack()
-# #location_entry.place(x=20,y=80,width=250)
+bath_Label=Label(root,text="Toilet/Bath No.",font=("times new roman",15,"bold"),bg="white")
+bath_entry=ttk.Entry(root,textvariable=bath,font=("times new roman",15))
+bath_Label.place(x=540,y=370,width=250)
+bath_entry.place(x=860,y=370,width=250)
 
 
-# bath_Label=Label(root,text="Toilet/Bath Count :",font=("times new roman",15,"bold"),bg="white")
-# bath_Label.pack()
-# #location_Label.place(x=20,y=50)
-# bath_entry=ttk.Entry(root,textvariable=bath,font=("times new roman",15))
-# bath_entry.pack()
-# #location_entry.place(x=20,y=80,width=250)
+balcony_Label=Label(root,text="Balcony No.",font=("times new roman",15,"bold"),bg="white")
+balcony_entry=ttk.Entry(root,textvariable=balcony,font=("times new roman",15))
+balcony_Label.place(x=540,y=415,width=250)
+balcony_entry.place(x=860,y=415,width=250)
 
-
-# balcony_Label=Label(root,text="Balcony count :",font=("times new roman",15,"bold"),bg="white")
-# balcony_Label.pack()
-# #location_Label.place(x=20,y=50)
-# balcony_entry=ttk.Entry(root,textvariable=balcony,font=("times new roman",15))
-# balcony_entry.pack()
-# #location_entry.place(x=20,y=80,width=250)
-
-# def myClick():
-#     if location.get()=="" or total_sqft.get()=="" or size.get()=="" or bath.get()=="" :
-#         messagebox.showerror("Error","All feilds are required !!!",parent=root)
-#     else:
-#         #messagebox.showinfo("Success","Entered successfully",parent=root)
-        
-#         NewIn=[[location.get(),total_sqft.get(),bath.get(),size.get()]]
-#         NewIn=pd.DataFrame(NewIn)
-#         NewIn.columns=['location','total_sqft','bath','bhk']
-#         print(NewIn)
-#         y_pred_lr = pipe.predict(NewIn)
-#         # print(y_pred_lr)
-#         price_Label.config(text=y_pred_lr)
+def myClick():
+    if location.get()=="" or total_sqft.get()=="" or size.get()=="" or bath.get()=="" :
+        messagebox.showerror("Error","All feilds are required !!!",parent=root)
+    else:
+        messagebox.showinfo("Success","Entered successfully",parent=root)
+        NewIn=[[location.get(),total_sqft.get(),bath.get(),size.get()]]
+        NewIn=pd.DataFrame(NewIn)
+        NewIn.columns=['location','total_sqft','bath','bhk']
+        print(NewIn)
+        y_pred_lr = pipe.predict(NewIn)
+        # print(y_pred_lr)
+        price.config(text=y_pred_lr)
         
 
-# myButton=Button(root,text="Predict Price",command=myClick)
-# myButton.pack()
+myButton=Button(root,text="Predict Price",font=("times new roman",20,"bold"),bg="light goldenrod",command=myClick)
+myButton.place(x=540,y=490,width=570)
 
-# price_Label=Label(root,text="Price :",font=("times new roman",15,"bold"),bg="white")
-# price_Label.pack()
-# #location_Label.place(x=20,y=50)
+price_Label=Label(root,text="Price",font=("times new roman",15,"bold"),bg="white")
+price_Label.place(x=540,y=585,width=250)
+price=Label(root,text="",font=("times new roman",15,"bold"),bg="white")
+price.place(x=860,y=585,width=250)
+
 
 
 root.mainloop()
