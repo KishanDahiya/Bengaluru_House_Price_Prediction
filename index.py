@@ -160,17 +160,26 @@ balcony_Label.place(x=540,y=415,width=250)
 balcony_entry.place(x=860,y=415,width=250)
 
 def myClick():
-    if location.get()=="" or total_sqft.get()=="" or size.get()=="" or bath.get()=="" :
-        messagebox.showerror("Error","All feilds are required !!!",parent=root)
-    else:
-        messagebox.showinfo("Success","Entered successfully",parent=root)
-        NewIn=[[location.get(),total_sqft.get(),bath.get(),size.get()]]
-        NewIn=pd.DataFrame(NewIn)
-        NewIn.columns=['location','total_sqft','bath','bhk']
-        print(NewIn)
-        y_pred_lr = pipe.predict(NewIn)
-        # print(y_pred_lr)
-        price.config(text=y_pred_lr)
+    try:
+        if location.get()=="" or total_sqft.get()=="" or size.get()=="" or bath.get()=="" :
+            messagebox.showerror("Error","All feilds are required !!!",parent=root)
+        else:
+            messagebox.showinfo("Success","Entered successfully",parent=root)
+            NewIn=[[location.get(),total_sqft.get(),bath.get(),size.get()]]
+            NewIn=pd.DataFrame(NewIn)
+            NewIn.columns=['location','total_sqft','bath','bhk']
+            print(NewIn)
+            try:
+                y_pred_lr = pipe.predict(NewIn)
+                y_pred_lr=str(int(y_pred_lr))+"0"+" Rupees/sqft"
+                # print(y_pred_lr)
+                price.config(text=y_pred_lr)
+            except:
+                messagebox.showinfo("Error","No Prediction made. Enter correct values!!!",parent=root)
+    except:
+        messagebox.showinfo("Error","Enter values of correct datatype!!!",parent=root)
+
+        
         
 
 myButton=Button(root,text="Predict Price",font=("times new roman",20,"bold"),bg="light goldenrod",command=myClick)
